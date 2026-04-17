@@ -1,0 +1,32 @@
+def simple_chatbot(user_input):
+    """A basic AI chatbot"""
+    user_input = user_input.lower()
+    
+    if "hello" in user_input or "hi" in user_input:
+        return "Hey there! How are you?"
+    elif "how are you" in user_input:
+        return "I'm doing great! Thanks for asking."
+    elif "what is your name" in user_input:
+        return "I'm a simple AI chatbot!"
+    elif "what is 1+1" in user_input or "1+1" in user_input:
+        return "1 + 1 = 2"
+    elif "what is 2+2" in user_input or "2+2" in user_input:
+        return "2 + 2 = 4"
+    elif "bye" in user_input:
+        return "Goodbye! See you later!"
+    else:
+        return "I don't understand that, but I'm learning!"
+
+# This is the part that lets you TALK to it
+print("=== Simple AI Chatbot ===")
+print("Type 'bye' to exit\n")
+
+while True:
+    user_message = input("You: ")
+    
+    if user_message.lower() == "bye":
+        print("AI: Goodbye! See you later!")
+        break
+    
+    response = simple_chatbot(user_message)
+    print(f"AI: {response}\n")
